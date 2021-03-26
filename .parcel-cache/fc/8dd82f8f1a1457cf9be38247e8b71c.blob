@@ -480,7 +480,7 @@ class Sketch {
     this.camera.updateProjectionMatrix();
   }
   addObjects() {
-    this.geometry = new _three.BoxGeometry(0.5, 0.5, 0.5);
+    this.geometry = new _three.BoxGeometry(0.5, 0.6, 0.1);
     this.material = new _three.MeshNormalMaterial();
     this.material = new _three.ShaderMaterial({
       fragmentShader: `
@@ -62960,4 +62960,4 @@ if (typeof window !== 'undefined') {
 
 },{"@parcel/transformer-js/lib/esmodule-helpers.js":"3xy7C"}]},["3KdSp","71k5j"], "71k5j", "parcelRequire427e")
 
-//# sourceMappingURL=index.24e1d95d.js.map
+//# sourceMappingURL=index.HASH_REF_b9167a940929bdec77a4418224e1d95d.js.map
