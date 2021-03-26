@@ -461,26 +461,12 @@ class Sketch {
     this.renderer.setSize(this.width, this.height);
     this.container.appendChild(this.renderer.domElement);
     this.controls = new _threeExamplesJsmControlsOrbitControlsJs.OrbitControls(this.camera, this.renderer.domElement);
-    this.resize();
-    this.setupResize();
     this.addObjects();
     this.render();
   }
-  setupResize() {
-    window.addEventListener('resize', this.resize.bind(this));
-  }
-  resize() {
-    // recalculate the size of the container
-    this.width = this.container.offsetWidth;
-    this.height = this.container.offsetHeight;
-    // re set the renderer
-    this.renderer.setSize(this.width, this.height);
-    // change aspect ratio of the camera
-    this.camera.aspect = this.width / this.height;
-    this.camera.updateProjectionMatrix();
-  }
+  resize() {}
   addObjects() {
-    this.geometry = new _three.BoxGeometry(0.5, 0.6, 0.1);
+    this.geometry = new _three.BoxGeometry(0.5, 0.5, 0.4);
     this.material = new _three.MeshNormalMaterial();
     this.mesh = new _three.Mesh(this.geometry, this.material);
     this.scene.add(this.mesh);
@@ -62948,4 +62934,4 @@ if (typeof window !== 'undefined') {
 
 },{"@parcel/transformer-js/lib/esmodule-helpers.js":"3xy7C"}]},["3KdSp","71k5j"], "71k5j", "parcelRequire427e")
 
-//# sourceMappingURL=index.24e1d95d.js.map
+//# sourceMappingURL=index.HASH_REF_b9167a940929bdec77a4418224e1d95d.js.map
