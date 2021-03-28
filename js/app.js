@@ -50,7 +50,8 @@ export default class Sketch {
   }
 
   addObjects() {
-    this.geometry = new THREE.PlaneBufferGeometry(4, 4, 50, 50);
+    this.geometry = new THREE.PlaneBufferGeometry(1, 1, 50, 50);
+    this.geometry = new THREE.SphereBufferGeometry(0.4, 50, 50);
     this.material = new THREE.MeshNormalMaterial();
 
     this.material = new THREE.ShaderMaterial({
@@ -61,7 +62,7 @@ export default class Sketch {
       side: THREE.DoubleSide,
       fragmentShader: fragment,
       vertexShader: vertex,
-      wireframe: false,
+      wireframe: true,
     });
 
     this.mesh = new THREE.Mesh(this.geometry, this.material);

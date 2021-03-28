@@ -83,11 +83,17 @@ void main() {
   vec3 newposition = position;
   float PI = 3.1415925;
 
-  float noise = cnoise(vec3(position.x*4., position.y*4. + time/5., 0.));
+  float noise = cnoise(3.*vec3(position.x, position.y, position.z + time/10.));
   // newposition.z += 0.1*sin((newposition.x + 0.25 + time/10.)*2.*PI);
   // newposition.z += 0.2*cnoise(vec3(position.x*2., position.y*2. + time/10., 0.));
-  // newposition.z += 0.2*noise;
+  // newposition.z += 0.05*noise;
+  // float dist = distance(uv, vec2(0.5));
 
+  // newposition.z += 0.05*sin(dist *40.);
+
+
+  newposition += 0.02*normal * noise; 
+  // vNoise = noise;
   vNoise = noise;
   vUv = uv;
 
